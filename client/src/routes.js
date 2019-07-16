@@ -11,6 +11,7 @@ import UserReview from './components/Admin/userPosts'
 import Login from './containers/Admin/login'
 import AddReview from './containers/Admin/add'
 import EditPost from './containers/Admin/edit'
+import Register from './containers/Admin/register'
 
 
 // HOC
@@ -26,6 +27,7 @@ const Routes = () => {
           <Route path="/login" exact component={Auth(Login, false)}></Route>
           <Route path="/user" exact component={Auth(User, true)}></Route>
           <Route path="/user/add" exact component={Auth(AddReview, true)}></Route>
+          <Route path="/user/register" exact component={Auth(Register, true)}></Route>
           <Route path="/user/user-reviews" exact component={Auth(UserReview, true)}></Route>
           <Route path="/user/edit-post/:id" exact component={Auth(EditPost, true)}></Route>
           <Route path="/books/:id" exact component={Auth(BookView)}></Route>

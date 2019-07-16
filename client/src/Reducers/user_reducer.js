@@ -5,8 +5,9 @@ export default function(state={}, action){
         case "USER_AUTH":
             return {...state, login:action.payload}
             case "GET_USER_POSTS":
-                
-                return {...state, userPosts:action.payload}
+            return {...state, userPosts:action.payload}
+                case "GET_USERS":
+                    return {...state, users:action.payload}
         default:
             return state
     }

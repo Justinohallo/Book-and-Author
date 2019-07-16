@@ -98,7 +98,6 @@ export class EditBook extends PureComponent {
                         Post Deleted
                         {this.redirectUser()}
                     </div> : null
-
                 }
 
                     <h2>Edit Review</h2>

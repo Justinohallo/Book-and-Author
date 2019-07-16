@@ -160,3 +160,28 @@ export function getUserPosts(userId){
     }
 }
 
+export function getUsers(){
+    const request = axios.get(`/api/users`)
+    .then(response => response.data)
+    return {
+        type:'GET_USERS',
+        payload:request
+    }
+}
+
+export function userReguster(user, userList){
+    const request = axios.get(`/api/register`,user)
+   return (dispatch) =>{
+       request.then(({data})=>{
+           let response = {
+               success:data.success,
+               users:[...userList,data.user]
+           }
+           dispatch({
+               type:"USER_REGISTER",
+               payload:response
+           })
+       })
+   }
+
+}

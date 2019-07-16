@@ -35,6 +35,7 @@ export class Login extends Component {
 
     render() {
         let user = this.props.user
+       
         return (
             <div className='rl_container'>
                 <form onSubmit={this.submitForm}>
